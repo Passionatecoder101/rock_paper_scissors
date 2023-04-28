@@ -1,0 +1,36 @@
+#setting import
+import random
+
+#setting choices
+choices = list[rock, paper, scissors]
+
+#setting scores
+computerscore = 0
+playerscore = 0
+
+playerchoice = input("make your choice:")
+computerchoice = random(list)
+
+#setting computer win scenarios
+
+#rock
+if computerchoice == rock & playerchoice == scissors:
+    print (computerchoice)
+    print("computer wins!")
+    computerscore + 1
+    print (computerscore)
+    print(playerscore)
+#paper
+if computerchoice == paper & playerchoice == rock:
+    print (computerchoice)
+    print ("computer wins!")
+    computerscore + 1
+    print (computerscore)
+    print (playerscore)
+#scissors
+if computerchoice == scissors & playerchoice == paper:
+    print (computerchoice)
+    print ("computer wins!")
+    computerscore + 1
+    print (computerscore)
+    print (playerscore)
