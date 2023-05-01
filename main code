@@ -2,35 +2,51 @@
 import random
 
 #setting choices
-choices = list[rock, paper, scissors]
-
-#setting scores
-computerscore = 0
-playerscore = 0
+choices = ["rock", "paper", "scissors"]
 
 playerchoice = input("make your choice:")
-computerchoice = random(list)
+# computerchoice = random(list)
+
+computerchoice = choices[random.randint(0,2)]
 
 #setting computer win scenarios
 
-#rock
-if computerchoice == rock & playerchoice == scissors:
-    print (computerchoice)
-    print("computer wins!")
-    computerscore + 1
-    print (computerscore)
-    print(playerscore)
-#paper
-if computerchoice == paper & playerchoice == rock:
-    print (computerchoice)
+print ("computer chose:" + computerchoice)
+print ("player chose:" + playerchoice)
+
+#rock win (computer)
+
+if computerchoice == "rock" and playerchoice == "scissors" :
     print ("computer wins!")
-    computerscore + 1
-    print (computerscore)
-    print (playerscore)
-#scissors
-if computerchoice == scissors & playerchoice == paper:
-    print (computerchoice)
+
+#paper win (computer)
+
+if computerchoice == "paper" and playerchoice == "rock":
     print ("computer wins!")
-    computerscore + 1
-    print (computerscore)
-    print (playerscore)
+
+#scissors win (computer)
+
+if computerchoice == "scissors" and playerchoice == "paper" :
+    print ("computer wins!")
+
+#setting player win scenarios
+
+if playerchoice == "rock" and computerchoice == "scissors":
+    print ("player wins!")
+
+if playerchoice == "paper" and computerchoice == "rock":
+    print ("player wins!")
+
+if playerchoice == "scissors" and computerchoice == "paper":
+    print ("player wins!")
+
+# setting tie scenarios
+
+if playerchoice == "rock" and computerchoice == "rock":
+    print("Draw!")
+
+if playerchoice == "paper" and computerchoice == "paper":
+    print("Draw!")
+
+if playerchoice == "scissors" and computerchoice == "scissors":
+    print("Draw!")
